@@ -1,8 +1,7 @@
 class Solution {
     public int majorityElement(int[] nums) {
         
-        int index=0;
-        int count=1;
+        int index=0; int count=1;
         
         for(int i=1;i<nums.length;i++)
         {
@@ -11,8 +10,7 @@ class Solution {
             
             if(count==0)
             {
-                index=i;
-                count=1;
+                index=i; count=1;
             }
         }
         
