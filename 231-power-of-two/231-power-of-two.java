@@ -3,20 +3,23 @@ class Solution {
      
         //        for 2 power wale no has only 1 bit  
         
-        if(n<=0)
-            return false;
+        if(n<1) return false;
+        int no=1;
+        int bit=0;
         
-        int count=0;
-        
-        while(n!=0)
-        {
-           int var= n & 1 ;
-           if(var==1)
-               count++;
+        while(bit<32)
+        {   
+          if(no==n) 
+              return true;
+          else
+          {
+              no=no*2;
+                bit++;
+          }
             
-            n = n>>1;
+        
         }
         
-        return count==1;
+        return false;
     }
 }
